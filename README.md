@@ -185,7 +185,7 @@ loading of the game.
 
 ### Communication between multiple Client actors (in Game)
 
-<img src="media\image5.png">}
+<img src="media\image5.png">
 
 In this diagram, Client Actor 1 represents the game host while Client
 Actor 2 represents the game client. While Client Actor 1 is the host, it
@@ -294,7 +294,7 @@ system:
 
 <img src="media\image8.png">
 
-*[Diagram 1: Main lobby of the game]{.ul}*
+_Diagram 1: Main lobby of the game_
 
 Diagram 1 illustrates the GUI that will be displayed for the clients at
 the very beginning when they have successfully connected to the server.
@@ -313,8 +313,8 @@ game to work as intended.
 
 <img src="media\image9.png">
 
-*[Diagram 2: Pop up error message when the client tries to invite
-oneself]
+_Diagram 2: Pop up error message when the client tries to invite
+oneself_
 
 As illustrated in diagram 2, an error message is shown in a pop up
 dialog box when a host tries to invite himself/herself into the same
@@ -325,8 +325,8 @@ duplicate players joining the same server.
 
 <img src="media\image10.png">
 
-[Diagram 3: Pop up error message when
-client tries to invite a player that is currently in game]{.ul}*
+_Diagram 3: Pop up error message when
+client tries to invite a player that is currently in game_
 
 In diagram 3, when a player tries to invite another player in the lobby
 that is already in an existing game server, the system will display a
