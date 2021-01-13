@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.seamless:seamless-xml:1.1.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/http/4thline.org/m2/org/seamless/seamless-xml/1.1.2/seamless-xml-1.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/http/4thline.org/m2/org/seamless/seamless-xml/1.1.2/seamless-xml-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

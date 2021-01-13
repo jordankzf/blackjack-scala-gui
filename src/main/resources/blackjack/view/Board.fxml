@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="boardbackground" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.view.BoardController">
+   <children>
+      <Button id="buttonLeave" layoutX="1201.0" layoutY="27.0" mnemonicParsing="false" onAction="#leaveGame" text="Leave" AnchorPane.rightAnchor="36.6" AnchorPane.topAnchor="27.0" />
+      <Group id="opponent1" layoutX="105.0" layoutY="420.0">
+         <children>
+            <ImageView id="opponent1CardLeft" fx:id="playerLeftCard1" fitHeight="175.0" fitWidth="205.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardMiddle" fx:id="playerLeftCard2" fitHeight="175.0" fitWidth="132.0" layoutX="23.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardRight" fx:id="playerLeftCard3" fitHeight="175.0" fitWidth="132.0" layoutX="46.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerLeftCard4" fitHeight="175.0" fitWidth="205.0" layoutX="68.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerLeftCard5" fitHeight="175.0" fitWidth="205.0" layoutX="91.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Button id="playerButtonHit" fx:id="hitBtn" layoutX="799.0" layoutY="337.0" mnemonicParsing="false" onAction="#playerHit" prefHeight="37.0" prefWidth="80.0" text="Hit" />
+      <Button id="playerButtonStand" fx:id="standBtn" layoutX="799.0" layoutY="384.0" mnemonicParsing="false" onAction="#playerStand" prefHeight="37.0" prefWidth="80.0" text="Stand" />
+      <Button id="playerButtonIncrease" fx:id="increaseBetBtn" layoutX="799.0" layoutY="560.0" mnemonicParsing="false" onAction="#increaseBet" prefHeight="37.0" prefWidth="80.0" text="Increase" />
+      <Button id="playerButtonDecrease" fx:id="decreaseBetBtn" layoutX="799.0" layoutY="606.0" mnemonicParsing="false" onAction="#decreaseBet" text="Decrease" />
+      <Text id="playerCurrentBalance" layoutX="537.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Balance:" />
+      <Text id="playerCurrentBalanceValue" fx:id="playerMiddleBal" layoutX="656.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="1000" wrappingWidth="84.34375" />
+      <Text id="playerCurrentBetAmount" layoutX="595.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Bet:" />
+      <Text id="playerBetValue" fx:id="playerMiddleBet" layoutX="656.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="50" wrappingWidth="84.34375" />
+      <Text id="IndicatorTurn" fx:id="statusText" layoutX="46.0" layoutY="65.84765625" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="statustext" text="Waiting for host" wrappingWidth="337.693359375" AnchorPane.bottomAnchor="645.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="896.0" AnchorPane.topAnchor="27.0" />
+      <Group id="opponent1" layoutX="534.0" layoutY="420.0">
+         <children>
+            <ImageView id="opponent1CardLeft" fx:id="playerMiddleCard1" fitHeight="175.0" fitWidth="205.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardMiddle" fx:id="playerMiddleCard2" fitHeight="175.0" fitWidth="132.0" layoutX="23.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardRight" fx:id="playerMiddleCard3" fitHeight="175.0" fitWidth="132.0" layoutX="46.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerMiddleCard4" fitHeight="175.0" fitWidth="205.0" layoutX="68.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerMiddleCard5" fitHeight="175.0" fitWidth="205.0" layoutX="91.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group id="opponent1" layoutX="961.0" layoutY="420.0">
+         <children>
+            <ImageView id="opponent1CardLeft" fx:id="playerRightCard1" fitHeight="175.0" fitWidth="205.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardMiddle" fx:id="playerRightCard2" fitHeight="175.0" fitWidth="132.0" layoutX="23.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardRight" fx:id="playerRightCard3" fitHeight="175.0" fitWidth="132.0" layoutX="46.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerRightCard4" fitHeight="175.0" fitWidth="205.0" layoutX="68.0" layoutY="-32.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerRightCard5" fitHeight="175.0" fitWidth="205.0" layoutX="91.0" layoutY="-56.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group id="opponent1" layoutX="511.0" layoutY="68.0">
+         <children>
+            <ImageView id="opponent1CardLeft" fx:id="playerTopCard1" fitHeight="175.0" fitWidth="205.0" layoutX="5.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardMiddle" fx:id="playerTopCard2" fitHeight="175.0" fitWidth="132.0" layoutX="30.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardRight" fx:id="playerTopCard3" fitHeight="175.0" fitWidth="132.0" layoutX="55.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerTopCard4" fitHeight="175.0" fitWidth="205.0" layoutX="79.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+            <ImageView id="opponent1CardLeft" fx:id="playerTopCard5" fitHeight="175.0" fitWidth="205.0" layoutX="103.0" layoutY="-40.0" pickOnBounds="true" preserveRatio="true" styleClass="card">
+               <image>
+                  <Image url="@../img/cards/ace_of_clubs.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Text id="opponent1CurrentBalance" fx:id="playerLeftBalLabel" layoutX="110.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Balance:" />
+      <Text id="opponent1CurrentBalanceValue" fx:id="playerLeftBal" layoutX="226.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="1000" wrappingWidth="84.34375" />
+      <Text id="opponent2CurrentBalance" fx:id="playerRightBalLabel" layoutX="972.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Balance:" />
+      <Text id="playerCurrentBetAmount" fx:id="playerLeftBetLabel" layoutX="169.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Bet:" />
+      <Text id="playerBetValue" fx:id="playerLeftBet" layoutX="226.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="50" wrappingWidth="84.34375" />
+      <Text id="playerCurrentBetAmount" fx:id="playerRightBetLabel" layoutX="1031.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Bet:" />
+      <Text id="playerBetValue" fx:id="playerRightBet" layoutX="1087.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="50" wrappingWidth="84.34375" />
+      <Button id="buttonLeave" fx:id="nextRoundBtn" layoutX="751.0" layoutY="27.0" mnemonicParsing="false" onAction="#hostStartNextRound" text="Next Round" />
+      <Text id="opponent2CurrentBalanceValue" fx:id="playerRightBal" layoutX="1088.0" layoutY="695.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="1000" wrappingWidth="84.34375" />
+      <ImageView fx:id="playerConfetti" fitHeight="150.0" fitWidth="200.0" layoutX="539.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/confetti.gif" />
+         </image>
+      </ImageView>
+      <Button id="playerButtonDecrease" fx:id="confirmBetBtn" layoutX="799.0" layoutY="652.0" mnemonicParsing="false" onAction="#confirmBet" prefHeight="37.0" prefWidth="80.0" text="Confirm" />
+      <Text id="opponent1CurrentBalance" fx:id="playerMiddleName" layoutX="504.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Player name" textAlignment="CENTER" wrappingWidth="270.4560546875" />
+      <Text id="opponent1CurrentBalance" fx:id="playerLeftName" layoutX="75.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Empty slot" textAlignment="CENTER" wrappingWidth="270.4560546875" />
+      <Text id="opponent1CurrentBalance" fx:id="playerRightName" layoutX="937.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="boardtext" text="Empty slot" textAlignment="CENTER" wrappingWidth="270.4560546875">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font></Text>
+      <Button id="buttonLeave" fx:id="muteBtn" layoutX="1188.0" layoutY="75.0" mnemonicParsing="false" onAction="#mute" prefHeight="28.0" prefWidth="55.0" styleClass="mutebutton" />
+   </children>
+</AnchorPane>

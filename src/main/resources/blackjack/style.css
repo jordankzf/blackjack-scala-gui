@@ -1,0 +1,58 @@
+.button {
+	-fx-font-size: 16px;
+	-fx-font-weight: bold;
+    -fx-background-color: #ccdb30;
+    -fx-padding: 6px;
+	-fx-border-radius: 5px;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 1 , 0 , 0);
+}
+
+.button:hover{
+    -fx-background-color: #b6c322;
+}
+
+.mutebutton {
+     -fx-graphic: url("img/mute.png");
+}
+
+.mutebutton:hover{
+    -fx-background-color: #b6c322;
+}
+
+//Lobby
+.lobbybackground {
+    -fx-background-image: url("img/LobbyBG.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center
+}
+
+.lobby {
+    -fx-font-size: 60px;
+    -fx-fill: #f6ff00;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 1 , 0 , 1);
+}
+
+//Board
+.boardbackground {
+    -fx-background-image: url("img/BoardBG.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.boardtext {
+    -fx-font-size: 30px;
+	-fx-fill: #FFFFFF;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 1 , 0 , 1);
+}
+
+.statustext {
+    -fx-font-size: 36px;
+	-fx-fill: #FFFFFF;
+	-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 1 , 0 , 1);
+}
+
+.card {
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 10, 0 , 0 , 0);
+}

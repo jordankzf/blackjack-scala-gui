@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="lobbybackground" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.view.LobbyController">
+   <children>
+      <ListView fx:id="lobbyList" layoutX="278.0" layoutY="335.0" prefHeight="262.0" prefWidth="279.0" />
+      <Button fx:id="inviteBtn" disable="true" layoutX="284.0" layoutY="609.0" mnemonicParsing="false" onAction="#playerInvite" prefHeight="38.0" prefWidth="58.0" text="Invite" />
+      <Text fx:id="topText" layoutX="11.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="statustext" text="Lobby" textAlignment="CENTER" wrappingWidth="1257.978515625" />
+      <Button fx:id="joinBtn" layoutX="611.0" layoutY="236.0" mnemonicParsing="false" onAction="#playerJoin" prefHeight="38.0" prefWidth="58.0" text="Join" />
+      <Button layoutX="1187.0" layoutY="27.0" mnemonicParsing="false" onAction="#playerExit" prefHeight="38.0" prefWidth="58.0" text="Exit" />
+      <ListView fx:id="roomList" layoutX="713.0" layoutY="335.0" prefHeight="262.0" prefWidth="279.0" />
+      <Button fx:id="leaveBtn" disable="true" layoutX="914.0" layoutY="609.0" mnemonicParsing="false" onAction="#playerLeave" prefHeight="38.0" prefWidth="58.0" text="Leave" />
+      <Text layoutX="305.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="statustext" text="Players Online" />
+      <Text layoutX="741.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="statustext" text="Current Room" />
+      <TextField fx:id="playerName" layoutX="565.0" layoutY="197.0" promptText="ENTER NAME" />
+      <ImageView fx:id="lobbyStatusIcon" fitHeight="76.0" fitWidth="72.0" layoutX="1123.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/serverDisconnected.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="newBtn" disable="true" layoutX="733.0" layoutY="609.0" mnemonicParsing="false" onAction="#playerNew" prefHeight="38.0" prefWidth="58.0" text="New" />
+      <Button fx:id="startBtn" disable="true" layoutX="824.0" layoutY="609.0" mnemonicParsing="false" onAction="#gameStart" prefHeight="38.0" prefWidth="58.0" text="Start" />
+      <Button id="buttonLeave" fx:id="muteBtn" layoutX="1188.0" layoutY="75.0" mnemonicParsing="false" onAction="#mute" prefHeight="28.0" prefWidth="55.0" styleClass="mutebutton" />
+      <Text fx:id="topText1" layoutX="500.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="lobby" text="Blackjack" textAlignment="CENTER" wrappingWidth="279.0000057220459" />
+   </children>
+</AnchorPane>
