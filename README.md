@@ -1,70 +1,44 @@
-![](media\image1.jpg){width="2.526042213473316in"
-height="1.0485454943132109in"}
-
-**NET3204: Distributed System**
-
-**Group Assignment**
-
-**Lecturer:** Dr. Chin Teck Min
-
-**Group Name:** Prerequisite
-
-**Members:**
-
-  ----------------------- ----------
-  **Name**                **ID**
-  Wong Chuen Ting         17035528
-  Jordan Kee Zheng Feng   17029752
-  Nicholas Ng Yee Jet     17003625
-  Gan Wei Qi              17032418
-  ----------------------- ----------
-
 **Table of Contents**
 
 [**1. Introduction to Proposed
-System**](#introduction-to-proposed-system) **3**
+System**](#introduction-to-proposed-system)
 
 **[2. Physical and Interactive Model](#physical-and-interactive-model)**
-**4**
 
-> [System Architecture Design](#system-architecture-design) 4
+> [System Architecture Design](#system-architecture-design)
 >
 > [Communication Protocol Sequence
-> Diagram](#communication-protocol-sequence-diagram) 5
+> Diagram](#communication-protocol-sequence-diagram)
 >
 > [Communication between Client Actor and Server
-> Actor](#communication-between-client-actor-and-server-actor) 5
+> Actor](#communication-between-client-actor-and-server-actor)
 >
 > [Communication between multiple Client actors (in
-> Lobby)](#communication-between-multiple-client-actors-in-lobby) 7
+> Lobby)](#communication-between-multiple-client-actors-in-lobby)
 >
 > [Communication between multiple Client actors (in
-> Game)](#communication-between-multiple-client-actors-in-game) 9
+> Game)](#communication-between-multiple-client-actors-in-game)
 
 **[3. Scalability & Reliability of
-System](#scalability-reliability-of-system)** **12**
+System](#scalability-reliability-of-system)**
 
-> [Scalability of the System](#scalability-of-the-system) 12
+> [Scalability of the System](#scalability-of-the-system)
 >
-> [Reliability of the System](#reliability-of-the-system) 14
+> [Reliability of the System](#reliability-of-the-system)
 
-**[4. Test Case Proposed & Result](#test-case-proposed-result)** **17**
+**[4. Test Case Proposed & Result](#test-case-proposed-result)**
 
-> [Test Cases](#test-cases) 17
+> [Test Cases](#test-cases)
 >
-> [Internet Connectivity](#internet-connectivity) 19
+> [Internet Connectivity](#internet-connectivity)
 >
-> [Additional Screenshots](#additional-screenshots) 21
+> [Additional Screenshots](#additional-screenshots)
 
-**[5. Personal Reflections](#personal-reflections)** **32**
+**[5. Personal Reflections](#personal-reflections)**
 
-> [Wong Chuen Ting (17035528)](#wong-chuen-ting-17035528) 32
+> [jordankzf](#jordankzf)
 >
-> [Jordan Kee Zheng Feng (17029752)](#jordan-kee-zheng-feng-17029752) 34
->
-> [Nicholas Ng Yee Jet (17003625)](#nicholas-ng-yee-jet-17003625) 36
->
-> [Gan Wei Qi (17032418)](#gan-wei-qi-17032418) 38
+> [nnyj](#nnyj)
 
 # 1. Introduction to Proposed System
 
@@ -109,7 +83,7 @@ of their homes safely during this difficult time.
 
 ## **System Architecture Design**
 
-![](media\image2.png){width="6.5in" height="1.8888888888888888in"}
+<img href="media\image2.png">
 
 The system architecture design of the Blackjack application consists of
 Client-Server architecture and Model-View-Controller design for
@@ -141,8 +115,7 @@ Model-View-Controller design architecture.
 
 ## Communication between Client Actor and Server Actor
 
-![](media\image3.png){width="5.89413167104112in"
-height="7.3147681539807525in"}
+<img href="media\image3.png">
 
 Initially, the server actor will join the cluster node. It will then
 subscribe to ReachabilityChange events so that the cluster receptionist
@@ -171,8 +144,7 @@ server actor to indicate that it is leaving the lobby.
 
 ## Communication between multiple Client actors (in Lobby)
 
-![](media\image4.png){width="6.140625546806649in"
-height="7.881189851268592in"}
+<img href="media\image4.png">
 
 In this diagram, Client Actor 1 represents the room host, while Client
 Actor 2 represents the room member. Initially, Client Actor 1 receives a
@@ -213,8 +185,7 @@ loading of the game.
 
 ## Communication between multiple Client actors (in Game)
 
-![](media\image5.png){width="4.166235783027122in"
-height="8.342732939632546in"}
+<img href="media\image5.png">}
 
 In this diagram, Client Actor 1 represents the game host while Client
 Actor 2 represents the game client. While Client Actor 1 is the host, it
@@ -290,15 +261,13 @@ notification that the host has left the game and to join another room.
 
 ## Scalability of the System
 
-![](media\image6.png){width="6.1363615485564305in"
-height="5.585662729658793in"}
+<img href="media\image6.png">
 
 The purpose of the server actor is to send the members list to each
 client actor. The server actor will broadcast the members list whenever
 there are any changes in the members list.
 
-![](media\image7.png){width="5.3506091426071745in"
-height="5.144816272965879in"}
+<img href="media\image7.png">
 
 Within the game room, one of the client actors will act as the game
 host. Each client actor will directly communicate with each other
@@ -321,8 +290,9 @@ the system must have the readiness in detecting and counteracting any
 possible failures and performing error handling throughout the system
 execution. Below are a handful of error handling mechanisms that were
 implemented into the
-system:![](media\image8.png){width="6.546875546806649in"
-height="3.7083333333333335in"}
+system:
+
+<img href="media\image8.png">
 
 *[Diagram 1: Main lobby of the game]{.ul}*
 
@@ -341,9 +311,10 @@ the game room. Should the "Start" button be executable, then the game
 will enter an error state as the game needed at least 1 client for the
 game to work as intended.
 
+<img href="media\image9.png">
+
 *[Diagram 2: Pop up error message when the client tries to invite
-oneself]{.ul}*![](media\image9.png){width="6.463542213473316in"
-height="3.7083333333333335in"}
+oneself]
 
 As illustrated in diagram 2, an error message is shown in a pop up
 dialog box when a host tries to invite himself/herself into the same
@@ -352,8 +323,9 @@ tries to invite a player that is already in the same game room. The
 reason for this implementation is to prevent any possibility of
 duplicate players joining the same server.
 
-![](media\image10.png){width="6.46875in"
-height="3.7291666666666665in"}*[Diagram 3: Pop up error message when
+<img href="media\image10.png">
+
+[Diagram 3: Pop up error message when
 client tries to invite a player that is currently in game]{.ul}*
 
 In diagram 3, when a player tries to invite another player in the lobby
@@ -371,126 +343,178 @@ overall game experience for Jordan.
 
 ## Test Cases
 
-**Video Link: [[(Click here to be redirected to the
-video)]{.ul}](https://drive.google.com/file/d/1Lc_HAVZK7XkjHGA9LpB_u3T2odP5bfzW/view?usp=sharing)**
-
-+---------+--------------+--------------+--------------+--------------+
-| **No.** | **Test       | **Test       | **Expected   | **Actual     |
-|         | Case**       | Step**       | Result**     | Results**    |
-+---------+--------------+--------------+--------------+--------------+
-| 1\.     | Launch       | 1\. Run      | Application  | Application  |
-|         | Blackjack    | client       | must be      | launched     |
-|         | application  | application  | opened after | successfully |
-|         |              |              | launching    |              |
-|         |              | 2\. Input    | the          |              |
-|         |              | port number  | application  |              |
-+---------+--------------+--------------+--------------+--------------+
-| 2\.     | Check        | 1\. Click on | Application  | Mute button  |
-|         | f            | the Mute     | music should | performed as |
-|         | unctionality | Button       | be muted and | intended     |
-|         | on the Mute  |              | unmuted      |              |
-|         | button in    |              | during each  |              |
-|         | the lobby    |              | clicks       |              |
-|         | screen       |              |              |              |
-+---------+--------------+--------------+--------------+--------------+
-| 3\.     | Check if     | 1\. Enter    | Application  | Created and  |
-|         | client is    | name and     | should       | entered a    |
-|         | able to      | click on     | transition   | game         |
-|         | create and   | Join button  | from the     | successfully |
-|         | enter a      |              | lobby screen |              |
-|         | single       | 2\. Click on | to the game  |              |
-|         | player game  | New button   | screen       |              |
-|         | of Blackjack |              |              |              |
-|         |              | 3\. Click on |              |              |
-|         |              | Start button |              |              |
-+---------+--------------+--------------+--------------+--------------+
-| 4\.     | Play 3       | 1\. Click on | Application  | Blackjack    |
-|         | rounds of    | Incre        | should be    | application  |
-|         | Blackjack    | ase/Decrease | running      | game played  |
-|         | alone to     | button       | smoothly     | successfully |
-|         | ensure that  |              | with no      | for 3 rounds |
-|         | all of the   | 2\. Click on | errors;      | with balance |
-|         | game         | Confirm      | Client's     | of client    |
-|         | functions    | button       | balance      | updated      |
-|         | and logic    |              | should be    | correctly    |
-|         | are working  | 3\. Wait for | adde         |              |
-|         | as intended  | cards to be  | d/subtracted |              |
-|         |              | distributed  | correctly    |              |
-|         |              |              | according to |              |
-|         |              | 4\. Click    | bet amount   |              |
-|         |              | Hit button   |              |              |
-|         |              | at least     |              |              |
-|         |              | once         |              |              |
-|         |              |              |              |              |
-|         |              | 5\. Click    |              |              |
-|         |              | Stand button |              |              |
-|         |              | at least     |              |              |
-|         |              | once         |              |              |
-|         |              |              |              |              |
-|         |              | 6\. Wait for |              |              |
-|         |              | results and  |              |              |
-|         |              | click Next   |              |              |
-|         |              | Round button |              |              |
-+---------+--------------+--------------+--------------+--------------+
-| 5\.     | Check        | 1\. Click on | Application  | Mute button  |
-|         | f            | the Mute     | music should | performed as |
-|         | unctionality | button       | be muted and | intended     |
-|         | on the Mute  |              | unmuted      |              |
-|         | button in    |              | during each  |              |
-|         | the game     |              | clicks       |              |
-|         | screen       |              |              |              |
-+---------+--------------+--------------+--------------+--------------+
-| 6\.     | Check        | 1\. Click on | Application  | Client       |
-|         | f            | the Leave    | should       | successfully |
-|         | unctionality | button       | transition   | left the     |
-|         | on the Leave |              | from the     | current game |
-|         | button in    |              | game screen  |              |
-|         | the game     |              | to the lobby |              |
-|         | screen       |              | screen       |              |
-+---------+--------------+--------------+--------------+--------------+
-| 7\.     | Invite       | 1\. Click on | Both clients | Clients      |
-|         | another      | the New      | should be in | joined the   |
-|         | client to    | button       | the same     | same room    |
-|         | the same     |              | game room    | successfully |
-|         | room and     | 2\. Select   |              |              |
-|         | start the    | the client's |              |              |
-|         | game         | name and     |              |              |
-|         |              | click on the |              |              |
-|         |              | invite       |              |              |
-|         |              | button       |              |              |
-|         |              |              |              |              |
-|         |              | 3\. Click on |              |              |
-|         |              | the Start    |              |              |
-|         |              | button       |              |              |
-+---------+--------------+--------------+--------------+--------------+
-| 8\.     | Play 1 round | 1\. Click on | Application  | Blackjack    |
-|         | of Blackjack | Incre        | should be    | application  |
-|         | with both    | ase/Decrease | running      | game played  |
-|         | clients to   | button       | smoothly     | successfully |
-|         | ensure that  |              | with no      | for 1 round  |
-|         | all of the   | 2\. Click on | errors; Both | with balance |
-|         | game         | Confirm      | Client's     | of both      |
-|         | functions    | button       | balance      | client       |
-|         | and logic    |              | should be    | updated      |
-|         | are working  | 3\. Wait for | adde         | correctly    |
-|         | as intended  | cards to be  | d/subtracted |              |
-|         |              | distributed  | correctly    |              |
-|         |              |              | according to |              |
-|         |              | 4\. Click    | bet amount   |              |
-|         |              | Hit button   |              |              |
-|         |              | at least     |              |              |
-|         |              | once         |              |              |
-|         |              |              |              |              |
-|         |              | 5\. Click    |              |              |
-|         |              | Stand button |              |              |
-|         |              | at least     |              |              |
-|         |              | once         |              |              |
-|         |              |              |              |              |
-|         |              | 6\. Wait for |              |              |
-|         |              | results and  |              |              |
-|         |              | click Next   |              |              |
-|         |              | Round button |              |              |
-+---------+--------------+--------------+--------------+--------------+
+<table width="669">
+<tbody>
+<tr>
+<td width="38">
+<p><strong>No.</strong></p>
+</td>
+<td width="162">
+<p><strong>Test Case</strong></p>
+</td>
+<td width="224">
+<p><strong>Test Step</strong></p>
+</td>
+<td width="133">
+<p><strong>Expected Result</strong></p>
+</td>
+<td width="112">
+<p><strong>Actual Results</strong></p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>1.</p>
+</td>
+<td width="162">
+<p>Launch Blackjack application</p>
+</td>
+<td width="224">
+<p>1. Run client application</p>
+<p>2. Input port number</p>
+</td>
+<td width="133">
+<p>Application must be opened after launching the application</p>
+</td>
+<td width="112">
+<p>Application launched successfully</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>2.</p>
+</td>
+<td width="162">
+<p>Check functionality on the Mute button in the lobby screen</p>
+</td>
+<td width="224">
+<p>1. Click on the Mute Button</p>
+</td>
+<td width="133">
+<p>Application music should be muted and unmuted during each clicks</p>
+</td>
+<td width="112">
+<p>Mute button performed as intended</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>3.</p>
+</td>
+<td width="162">
+<p>Check if client is able to create and enter a single player game of Blackjack</p>
+</td>
+<td width="224">
+<p>1. Enter name and click on Join button</p>
+<p>2. Click on New button</p>
+<p>3. Click on Start button</p>
+</td>
+<td width="133">
+<p>Application should transition from the lobby screen to the game screen</p>
+</td>
+<td width="112">
+<p>Created and entered a game successfully</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>4.</p>
+</td>
+<td width="162">
+<p>Play 3 rounds of Blackjack alone to ensure that all of the game functions and logic are working as intended</p>
+</td>
+<td width="224">
+<p>1. Click on Increase/Decrease button</p>
+<p>2. Click on Confirm button</p>
+<p>3. Wait for cards to be distributed</p>
+<p>4. Click Hit button at least once</p>
+<p>5. Click Stand button at least once</p>
+<p>6. Wait for results and click Next Round button</p>
+</td>
+<td width="133">
+<p>Application should be running smoothly with no errors; Client&rsquo;s balance should be added/subtracted correctly according to bet amount</p>
+</td>
+<td width="112">
+<p>Blackjack application game played successfully for 3 rounds with balance of client updated correctly</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>5.</p>
+</td>
+<td width="162">
+<p>Check functionality on the Mute button in the game screen</p>
+</td>
+<td width="224">
+<p>1. Click on the Mute button</p>
+</td>
+<td width="133">
+<p>Application music should be muted and unmuted during each clicks</p>
+</td>
+<td width="112">
+<p>Mute button performed as intended</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>6.</p>
+</td>
+<td width="162">
+<p>Check functionality on the Leave button in the game screen</p>
+</td>
+<td width="224">
+<p>1. Click on the Leave button</p>
+</td>
+<td width="133">
+<p>Application should transition from the game screen to the lobby screen</p>
+</td>
+<td width="112">
+<p>Client successfully left the current game</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>7.</p>
+</td>
+<td width="162">
+<p>Invite another client to the same room and start the game</p>
+</td>
+<td width="224">
+<p>1. Click on the New button</p>
+<p>2. Select the client&rsquo;s name and click on the invite button</p>
+<p>3. Click on the Start button</p>
+</td>
+<td width="133">
+<p>Both clients should be in the same game room</p>
+</td>
+<td width="112">
+<p>Clients joined the same room successfully</p>
+</td>
+</tr>
+<tr>
+<td width="38">
+<p>8.</p>
+</td>
+<td width="162">
+<p>Play 1 round of Blackjack with both clients to ensure that all of the game functions and logic are working as intended</p>
+</td>
+<td width="224">
+<p>1. Click on Increase/Decrease button</p>
+<p>2. Click on Confirm button</p>
+<p>3. Wait for cards to be distributed</p>
+<p>4. Click Hit button at least once</p>
+<p>5. Click Stand button at least once</p>
+<p>6. Wait for results and click Next Round button</p>
+</td>
+<td width="133">
+<p>Application should be running smoothly with no errors; Both Client&rsquo;s balance should be added/subtracted correctly according to bet amount</p>
+</td>
+<td width="112">
+<p>Blackjack application game played successfully for 1 round with balance of both client updated correctly</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Internet Connectivity
 
@@ -505,17 +529,16 @@ address. The computer which hosts the server would need to download a
 client from No-IP which will dynamically update the IPv4 address with
 the hostname (bjgame.ddns.net) as the IPv4 address may change over time.
 
-![](media\image11.png){width="4.755208880139983in"
-height="2.8653182414698164in"}
+<img href="media\image11.png">
 
 The screenshot above confirms that when pinging "bjgame.ddns.net", it
 leads to the correct IPv4 address of the server.
 
-![](media\image12.png){width="6.5in" height="2.9722222222222223in"}
+<img href="media\image12.png">
 
 Jordan's view of the application.
 
-![](media\image13.png){width="6.5in" height="3.0694444444444446in"}
+<img href="media\image13.png">
 
 Chris' view of the application.
 
@@ -527,17 +550,19 @@ across the Internet.
 1.  Lobby list and room list can handle members leaving or becoming
     unreachable.
 
-![](media\image14.png){width="4.5in" height="3.2444192913385828in"}
+<img href="media\image14.png">
 
 View of Client 3333's Lobby with 2 members present: 3333 and 3334.
 
-![](media\image15.png){width="4.5in" height="3.3075in"}
+<img href="media\image15.png">
 
 View of Client 3333's Lobby after member 3334 left.
 
+<img href="media\image16.png">
+
 2.  When new clients join an existing lobby, the server only sends the
     updated member list who are
-    reachable.![](media\image16.png){width="4.5in" height="3.16125in"}
+    reachable.
 
 View of Client 3335's Lobby which consists of member 3333 (joined
 first), and member 3335 (joined third), while member 3334 (joined
@@ -546,16 +571,16 @@ second) is excluded.
 3.  Clients can receive an invitation from a room host and choose to
     accept or decline.
 
-![](media\image17.png){width="3.0in" height="1.4701990376202974in"}
+<img href="media\image17.png">
 
 Client 3335's pop-up message.
 
-![](media\image18.png){width="3.0in" height="1.4752471566054244in"}
+<img href="media\image18.png">
 
 If the client accepts, the host receives an invitation accepted pop-up
 message.
 
-![](media\image19.png){width="3.0in" height="1.4752471566054244in"}
+<img href="media\image19.png">
 
 If the client rejects, the host receives an invitation rejected pop-up
 message.
@@ -563,24 +588,24 @@ message.
 4.  Room list is updated when a member accepts an invitation from a game
     host.
 
-![](media\image20.png){width="4.5in" height="3.2625in"}
+<img href="media\image20.png">
 
 View of Client 3333's room list after member 3335 accepts invitation.
 
 5.  Room list is updated when a member leaves the room.
 
-![](media\image21.png){width="4.5in" height="3.3211843832020995in"}
+<img href="media\image21.png">
 
 View of Client 3333's room list when member 3335 left the room.
 
 6.  Client is correctly kicked from the room when the host leaves the
     room.
 
-![](media\image22.png){width="4.5in" height="3.34125in"}
+<img href="media\image22.png">
 
 Before: Host 3333 and Member 3335 is in the same room.
 
-![](media\image23.png){width="4.5in" height="3.2175in"}
+<img href="media\image23.png">
 
 After: Member 3335 receives a pop-up indicating that the host left the
 room.
@@ -588,157 +613,84 @@ room.
 7.  Clients cannot invite other players who are busy (e.g.: in another
     room).
 
-![](media\image24.png){width="6.0in" height="3.154741907261592in"}
+<img href="media\image24.png">
 
 Pop-up message indicating that the member being invited is busy.
 
 8.  Host will wait for all game clients to confirm bet amount before
     distributing cards.
 
-![](media\image25.png){width="6.0in" height="3.530546806649169in"}
+<img href="media\image25.png">
 
 9.  Bet amount is updated on all clients as bet amount is changed.
 
-![](media\image26.png){width="6.0in" height="3.531645888013998in"}
+<img href="media\image26.png">
 
 Client 3333's view.
 
-![](media\image27.png){width="6.0in" height="3.52380905511811in"}
+<img href="media\image27.png">
 
 Client 3335's view.
 
 10. Indicate which client's turn and enable hit/stand button for the
     current client's turn.
 
-![](media\image28.png){width="6.0in" height="3.5230260279965004in"}
+<img href="media\image28.png">
 
 Client 3333's view.
 
-![](media\image29.png){width="6.0in" height="3.5172419072615924in"}
+<img href="media\image29.png">
 
 Client 3335's view.
 
 11. Indicate whether clients won or lost to the dealer, update balance
     on all clients, enable next round button for host.
 
-![](media\image30.png){width="6.0in" height="3.524271653543307in"}
+<img href="media\image30.png">
 
 Client 3333's view. Client 3333 lost 300 to the dealer, balance becomes
 700. Next round button is enabled as Client 3333 is the game host.
 
-![](media\image31.png){width="6.0in" height="3.525974409448819in"}
+<img href="media\image31.png">
 
 Client 3335's view. Client 3335 won 150 from the dealer, balance becomes
 1150.
 
 12. Round is restarted when the next round button is clicked.
 
-![](media\image32.png){width="6.0in" height="3.5261537620297463in"}
+<img href="media\image32.png">
 
 Client 3333's view.
 
-![](media\image33.png){width="6.0in" height="3.5261537620297463in"}
+<img href="media\image33.png">
 
 Client 3335's view.
 
 13. Clients in the game can handle sudden disconnection / leaving of
     clients.
 
-![](media\image34.png){width="4.427083333333333in"
-height="3.0729166666666665in"}
+<img href="media\image34.png">
 
 Client 3333's view. Since Client 3335 left the room, the current round
 is immediately cancelled. Pop-up message indicating that Client 3335
 left the room and to request the host to start a new round. Next round
 button is enabled.
 
-![](media\image35.png){width="2.7343755468066493in"
-height="3.641905074365704in"}
+<img href="media\image35.png">
 
 Client 3335's name is strike-through to indicate disconnected status.
 
 14. Clients in the game can handle sudden disconnection / leaving of the
     host.
 
-![](media\image36.png){width="4.46875in" height="2.8645833333333335in"}
+<img href="media\image36.png">
 
 Clients receive a pop-up message indicating that the host has left the
 room and to join another room.
 
 # 5. Personal Reflections
 
-## **Wong Chuen Ting (17035528)**
-
-Concept:
-
-One of the distributed system concepts that have been applied to the
-Blackjack application is Scalability. Scalability of a system can be
-defined as the ability to handle an indefinite increase in the amount of
-load such as number of users to the system while simultaneously
-maintaining the system's overall quality and performance. A highly
-scalable distributed system can help to prevent any bottlenecks from
-occurring that may hinder the performance of the system. In this
-scenario, players using the system will not be affected by any
-performance loss or issues during highly congested hours.
-
-Application:
-
-In a typical client-server architecture, one of the downsides of the
-architecture is traffic congestion. This occurs when there are multiple
-clients requesting for resources from the server simultaneously. As a
-result, the server gets overloaded with requests, causing traffic
-congestion. For this Blackjack application, it also uses the
-client-server architecture. However, the server is designed in a way
-such that it is only responsible for keeping track of the online players
-and initialising the game. The client on the other hand is responsible
-for updating other players' information without the need of the server.
-As a result, the server will be less likely to face any traffic
-congestion due to the limited number of tasks it handles.
-
-Difficulties:
-
-One of the difficulties faced during this assignment is understanding
-and implementing the Akka framework into the system. As stated in the
-assignment requirements, the distributed system should be developed
-using Akka as the middleware to support the development of the system.
-With the unfamiliarity of Akka framework together with the lack of
-knowledge in Scala Programming language, the coding of the system is
-mainly done by Nicholas Ng and Jordan Kee to ensure the system functions
-smoothly and efficiently due to the time constraint.
-
-Strengths:
-
--   Highly scalable system that can accommodate large numbers of
-    lobby/games concurrently due to the architecture design.
-
--   Players can play with other players geographically through the
-    Internet
-
--   Connected players can still continue to play with each other if the
-    server is disrupted/down
-
-Weakness:
-
--   Records of the past clients' statistics and scores are not recorded
-    and stored. Once the player leaves the game, the player's
-    information is deleted.
-
--   Application window is unable to increase/decrease in size.
-
--   If the server is terminated during a game, the clients connected
-    will not be notified.
-
-Contribution:
-
-  ----------------------- ------------------
-  **Name**                **Contribution**
-  Wong Chuen Ting         100%
-  Jordan Kee Zheng Feng   100%
-  Nicholas Ng Yee Jet     100%
-  Gan Wei Qi              100%
-  ----------------------- ------------------
-
-## **Jordan Kee Zheng Feng (17029752)**
+## **jordankzf**
 
 Concept:
 
@@ -791,17 +743,7 @@ Weaknesses:
     systems. We designed the ScalaFX FXMLs to be of fixed window-size
     from the very start of development, to save time.
 
-Contribution:
-
-  ----------------------- ------------------
-  **Name**                **Contribution**
-  Wong Chuen Ting         100%
-  Jordan Kee Zheng Feng   100%
-  Nicholas Ng Yee Jet     100%
-  Gan Wei Qi              100%
-  ----------------------- ------------------
-
-## **Nicholas Ng Yee Jet (17003625)**
+## **nnyj**
 
 Concepts:
 
@@ -840,68 +782,3 @@ Weaknesses:
     to make the code simpler.
 
 -   Lack of scoreboard to keep track of player's performance.
-
-Contribution:
-
-  ----------------------- ------------------
-  **Name**                **Contribution**
-  Wong Chuen Ting         100%
-  Jordan Kee Zheng Feng   100%
-  Nicholas Ng Yee Jet     100%
-  Gan Wei Qi              100%
-  ----------------------- ------------------
-
-## **Gan Wei Qi (17032418)**
-
-Concepts applied:
-
-Regarding the proposed system, it is understood that the design of the
-distributed system should be scalable and reliable in order to support
-the influx of clients using the system while constantly adapting to the
-increasing workload of the network, and handle exceptions that may occur
-while the system is running to ensure a smooth workflow with minimum
-risk of system crashing.
-
-Difficulties faced in this project:
-
--   There were port-forwarding issues present, and that I was unable to
-    port-forward because of the lack of access to my router. This led to
-    minor delays in systems testing and more effort was needed to find
-    alternatives to bypass the port-forwarding issues.
-
--   It was difficult to understand how to implement the actors in the
-    system, which led to us deconstructing the code to better understand
-    how the system would work. We eventually decided to have a meeting
-    with Dr. Chin after going through the akka documentation and still
-    not understanding how the actors work, with Dr. Chin explaining to
-    us the flow of information and behaviour between actors in the
-    system and how to make the system scalable.
-
-Strengths:
-
--   The proposed system implements distributed systems which allow the
-    game to be hosted through the internet
-
--   The proposed system uses ScalaFX to make the interface, which allows
-    for a visual representation of the system application, along with
-    sound effects and images for better immersion
-
--   The proposed system is scalable due to how the clients can handle
-    each other with minimal overhead in the server
-
-Weaknesses:
-
--   The application window is fixed which may affect some clients
-
--   Cheating may occur as each client handles their own game state
-    instead of the server
-
-Contribution:
-
-  ----------------------- ------------------
-  **Name**                **Contribution**
-  Wong Chuen Ting         100%
-  Jordan Kee Zheng Feng   100%
-  Nicholas Ng Yee Jet     100%
-  Gan Wei Qi              100%
-  ----------------------- ------------------
