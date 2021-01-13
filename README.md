@@ -113,7 +113,7 @@ Model-View-Controller design architecture.
 
 ## **Communication Protocol Sequence Diagram**
 
-## Communication between Client Actor and Server Actor
+### Communication between Client Actor and Server Actor
 
 <img src="media\image3.png">
 
