@@ -1,9 +1,9 @@
 **Table of Contents**
 
 [**1. Introduction to Proposed
-System**](#introduction-to-proposed-system)
+System**](#1-introduction-to-proposed-system)
 
-**[2. Physical and Interactive Model](#physical-and-interactive-model)**
+**[2. Physical and Interactive Model](#2-physical-and-interactive-model)**
 
 > [System Architecture Design](#system-architecture-design)
 >
@@ -20,13 +20,13 @@ System**](#introduction-to-proposed-system)
 > Game)](#communication-between-multiple-client-actors-in-game)
 
 **[3. Scalability & Reliability of
-System](#scalability-reliability-of-system)**
+System](#3-scalability-reliability-of-system)**
 
 > [Scalability of the System](#scalability-of-the-system)
 >
 > [Reliability of the System](#reliability-of-the-system)
 
-**[4. Test Case Proposed & Result](#test-case-proposed-result)**
+**[4. Test Case Proposed & Result](#4-test-case-proposed-result)**
 
 > [Test Cases](#test-cases)
 >
@@ -34,7 +34,7 @@ System](#scalability-reliability-of-system)**
 >
 > [Additional Screenshots](#additional-screenshots)
 
-**[5. Personal Reflections](#personal-reflections)**
+**[5. Personal Reflections](#5-personal-reflections)**
 
 > [jordankzf](#jordankzf)
 >
