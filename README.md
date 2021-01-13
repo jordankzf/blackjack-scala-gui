@@ -142,7 +142,7 @@ MemberList message with its updated members list to all existing
 members. Finally, the client actor can send a Leave message to the
 server actor to indicate that it is leaving the lobby.
 
-## Communication between multiple Client actors (in Lobby)
+### Communication between multiple Client actors (in Lobby)
 
 <img src="media\image4.png">
 
@@ -183,7 +183,7 @@ GameStart message from its controller, which then sends the
 GameStartReceive message to all members in the room to initiate the
 loading of the game.
 
-## Communication between multiple Client actors (in Game)
+### Communication between multiple Client actors (in Game)
 
 <img src="media\image5.png">}
 
