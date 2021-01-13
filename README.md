@@ -83,7 +83,7 @@ of their homes safely during this difficult time.
 
 ## **System Architecture Design**
 
-<img href="media\image2.png">
+<img src="media\image2.png">
 
 The system architecture design of the Blackjack application consists of
 Client-Server architecture and Model-View-Controller design for
@@ -115,7 +115,7 @@ Model-View-Controller design architecture.
 
 ## Communication between Client Actor and Server Actor
 
-<img href="media\image3.png">
+<img src="media\image3.png">
 
 Initially, the server actor will join the cluster node. It will then
 subscribe to ReachabilityChange events so that the cluster receptionist
@@ -144,7 +144,7 @@ server actor to indicate that it is leaving the lobby.
 
 ## Communication between multiple Client actors (in Lobby)
 
-<img href="media\image4.png">
+<img src="media\image4.png">
 
 In this diagram, Client Actor 1 represents the room host, while Client
 Actor 2 represents the room member. Initially, Client Actor 1 receives a
@@ -185,7 +185,7 @@ loading of the game.
 
 ## Communication between multiple Client actors (in Game)
 
-<img href="media\image5.png">}
+<img src="media\image5.png">}
 
 In this diagram, Client Actor 1 represents the game host while Client
 Actor 2 represents the game client. While Client Actor 1 is the host, it
@@ -261,13 +261,13 @@ notification that the host has left the game and to join another room.
 
 ## Scalability of the System
 
-<img href="media\image6.png">
+<img src="media\image6.png">
 
 The purpose of the server actor is to send the members list to each
 client actor. The server actor will broadcast the members list whenever
 there are any changes in the members list.
 
-<img href="media\image7.png">
+<img src="media\image7.png">
 
 Within the game room, one of the client actors will act as the game
 host. Each client actor will directly communicate with each other
@@ -292,7 +292,7 @@ execution. Below are a handful of error handling mechanisms that were
 implemented into the
 system:
 
-<img href="media\image8.png">
+<img src="media\image8.png">
 
 *[Diagram 1: Main lobby of the game]{.ul}*
 
@@ -311,7 +311,7 @@ the game room. Should the "Start" button be executable, then the game
 will enter an error state as the game needed at least 1 client for the
 game to work as intended.
 
-<img href="media\image9.png">
+<img src="media\image9.png">
 
 *[Diagram 2: Pop up error message when the client tries to invite
 oneself]
@@ -323,7 +323,7 @@ tries to invite a player that is already in the same game room. The
 reason for this implementation is to prevent any possibility of
 duplicate players joining the same server.
 
-<img href="media\image10.png">
+<img src="media\image10.png">
 
 [Diagram 3: Pop up error message when
 client tries to invite a player that is currently in game]{.ul}*
@@ -529,16 +529,16 @@ address. The computer which hosts the server would need to download a
 client from No-IP which will dynamically update the IPv4 address with
 the hostname (bjgame.ddns.net) as the IPv4 address may change over time.
 
-<img href="media\image11.png">
+<img src="media\image11.png">
 
 The screenshot above confirms that when pinging "bjgame.ddns.net", it
 leads to the correct IPv4 address of the server.
 
-<img href="media\image12.png">
+<img src="media\image12.png">
 
 Jordan's view of the application.
 
-<img href="media\image13.png">
+<img src="media\image13.png">
 
 Chris' view of the application.
 
@@ -550,15 +550,15 @@ across the Internet.
 1.  Lobby list and room list can handle members leaving or becoming
     unreachable.
 
-<img href="media\image14.png">
+<img src="media\image14.png">
 
 View of Client 3333's Lobby with 2 members present: 3333 and 3334.
 
-<img href="media\image15.png">
+<img src="media\image15.png">
 
 View of Client 3333's Lobby after member 3334 left.
 
-<img href="media\image16.png">
+<img src="media\image16.png">
 
 2.  When new clients join an existing lobby, the server only sends the
     updated member list who are
@@ -571,16 +571,16 @@ second) is excluded.
 3.  Clients can receive an invitation from a room host and choose to
     accept or decline.
 
-<img href="media\image17.png">
+<img src="media\image17.png">
 
 Client 3335's pop-up message.
 
-<img href="media\image18.png">
+<img src="media\image18.png">
 
 If the client accepts, the host receives an invitation accepted pop-up
 message.
 
-<img href="media\image19.png">
+<img src="media\image19.png">
 
 If the client rejects, the host receives an invitation rejected pop-up
 message.
@@ -588,24 +588,24 @@ message.
 4.  Room list is updated when a member accepts an invitation from a game
     host.
 
-<img href="media\image20.png">
+<img src="media\image20.png">
 
 View of Client 3333's room list after member 3335 accepts invitation.
 
 5.  Room list is updated when a member leaves the room.
 
-<img href="media\image21.png">
+<img src="media\image21.png">
 
 View of Client 3333's room list when member 3335 left the room.
 
 6.  Client is correctly kicked from the room when the host leaves the
     room.
 
-<img href="media\image22.png">
+<img src="media\image22.png">
 
 Before: Host 3333 and Member 3335 is in the same room.
 
-<img href="media\image23.png">
+<img src="media\image23.png">
 
 After: Member 3335 receives a pop-up indicating that the host left the
 room.
@@ -613,77 +613,77 @@ room.
 7.  Clients cannot invite other players who are busy (e.g.: in another
     room).
 
-<img href="media\image24.png">
+<img src="media\image24.png">
 
 Pop-up message indicating that the member being invited is busy.
 
 8.  Host will wait for all game clients to confirm bet amount before
     distributing cards.
 
-<img href="media\image25.png">
+<img src="media\image25.png">
 
 9.  Bet amount is updated on all clients as bet amount is changed.
 
-<img href="media\image26.png">
+<img src="media\image26.png">
 
 Client 3333's view.
 
-<img href="media\image27.png">
+<img src="media\image27.png">
 
 Client 3335's view.
 
 10. Indicate which client's turn and enable hit/stand button for the
     current client's turn.
 
-<img href="media\image28.png">
+<img src="media\image28.png">
 
 Client 3333's view.
 
-<img href="media\image29.png">
+<img src="media\image29.png">
 
 Client 3335's view.
 
 11. Indicate whether clients won or lost to the dealer, update balance
     on all clients, enable next round button for host.
 
-<img href="media\image30.png">
+<img src="media\image30.png">
 
 Client 3333's view. Client 3333 lost 300 to the dealer, balance becomes
 700. Next round button is enabled as Client 3333 is the game host.
 
-<img href="media\image31.png">
+<img src="media\image31.png">
 
 Client 3335's view. Client 3335 won 150 from the dealer, balance becomes
 1150.
 
 12. Round is restarted when the next round button is clicked.
 
-<img href="media\image32.png">
+<img src="media\image32.png">
 
 Client 3333's view.
 
-<img href="media\image33.png">
+<img src="media\image33.png">
 
 Client 3335's view.
 
 13. Clients in the game can handle sudden disconnection / leaving of
     clients.
 
-<img href="media\image34.png">
+<img src="media\image34.png">
 
 Client 3333's view. Since Client 3335 left the room, the current round
 is immediately cancelled. Pop-up message indicating that Client 3335
 left the room and to request the host to start a new round. Next round
 button is enabled.
 
-<img href="media\image35.png">
+<img src="media\image35.png">
 
 Client 3335's name is strike-through to indicate disconnected status.
 
 14. Clients in the game can handle sudden disconnection / leaving of the
     host.
 
-<img href="media\image36.png">
+<img src="media\image36.png">
 
 Clients receive a pop-up message indicating that the host has left the
 room and to join another room.
